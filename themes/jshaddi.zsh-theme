@@ -50,7 +50,10 @@ function ssh_connection() {
 PROMPT='$(ssh_connection)%{$reset_color%} %{$fg_bold[cyan]%}%n%{$fg_bold[white]%}@%{$fg_bold[magenta]%}%m%{$fg_bold[white]%}:%{$reset_color%}%{$fg_bold[green]%}%~%{$reset_color%}$(my_git_prompt) %{$fg_bold[yellow]%}⚡%{$reset_color%} '
 
 local return_code="%(?..%{$fg[red]%}%?%{$reset_color%})"
-RPROMPT='${return_code} $MODE_INDICATOR [%*]'
+
+
+##Remove this to get the defaul behavior from the vim-plugin
+#RPROMPT='${return_code} $MODE_INDICATOR [%*]'
 
 MODE_INDICATOR="%{$fg_bold[red]%}❮%{$reset_color%}%{$fg[red]%}❮❮%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%} [%{$fg[cyan]%}"
